@@ -1,0 +1,29 @@
+@charset 'utf-8';
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*サイドバーのリンク調整*/
+.sidebar a{
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+}
+
+.sidebar a::after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #31aae2;
+  transition: .3s;
+  transform: translateX(-50%);
+}
+
+.sidebar a:hover::after{
+  width: 100%;
+}
